@@ -1,0 +1,11 @@
+@model IEnumerable<OnlineLearnHub.Models.Course>
+
+<h2>Instructor Dashboard</h2>
+
+<h3>Your Courses</h3>
+<ul>
+    @foreach (var course in Model)
+    {
+        <li>@course.Title</li>
+    }
+</ul>

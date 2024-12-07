@@ -1,0 +1,46 @@
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<h2>Contact Us</h2>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+}
+
+@if (ViewBag.SuccessMessage != null)
+{
+    <div class="alert alert-success">@ViewBag.SuccessMessage</div>
+}
+
+<form action="/Home/Submit" method="post">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+    </div>
+
+    <div class="col-md-6">
+        <h3>Our Contact Information</h3>
+        <p><strong>Address:</strong><br>
+        Online Hub<br>
+        79 Garrybawn<br>
+        Dundalk, Co. Louth<br>
+        A91CFP8<br>
+        Ireland</p>
+        
+        <p><strong>Email:</strong> <a href="mailto:info@onlinehub.com">info@onlinehub.com</a></p>
+        <p><strong>Phone:</strong> +353 899 666 111</p>
+    
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>

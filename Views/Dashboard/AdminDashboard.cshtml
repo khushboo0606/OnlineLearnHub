@@ -1,0 +1,11 @@
+@model IEnumerable<OnlineLearnHub.Models.Course>
+
+<h2>Admin Dashboard</h2>
+
+<h3>All Courses</h3>
+<ul>
+    @foreach (var course in Model)
+    {
+        <li>@course.Title (Instructor: @(course.Instructor?.UserName ?? "Not Assigned"))</li>
+    }
+</ul>

@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2>Dashboard</h2>
+
+<h3>Enrolled Courses</h3>
+<div class="row">
+    @foreach (var course in ViewBag.EnrolledCourses)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">@course.Title</h5>
+                    <p class="card-text">@course.Description</p>
+                    <a href="#" class="btn btn-primary">Go to Course</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<h3>Recommended Courses</h3>
+<div class="row">
+    @foreach (var course in ViewBag.RecommendedCourses)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">@course.Title</h5>
+                    <p class="card-text">@course.Description</p>
+                    <a href="#" class="btn btn-secondary">Enroll</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,17 @@
+<h2>Student Dashboard</h2>
+
+<h3>Enrolled Courses</h3>
+<ul>
+    @foreach (var course in ViewBag.EnrolledCourses)
+    {
+        <li>@course.Title - @course.Description</li>
+    }
+</ul>
+
+<h3>Recommended Courses</h3>
+<ul>
+    @foreach (var course in ViewBag.RecommendedCourses)
+    {
+        <li>@course.Title - @course.Description</li>
+    }
+</ul>
